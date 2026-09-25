@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Koda Noble Menswear — Redefining the Modern Gentleman</title>
+<meta name="description" content="Koda Noble Menswear — Bespoke quality, premium fabrics and sustainable craft." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { alabaster:'#FAFAFA', charcoal:'#1A1A1A', ink:'#2C2C2C', brass:'#B7935B', brasslt:'#D6B87E', brassdk:'#8E7040' },
+      fontFamily: { serif:['"Playfair Display"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] },
+      letterSpacing: { widest2:'0.28em', widest3:'0.42em' }
+    }}
+  }
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html, body { background: #FAFAFA; margin: 0; }
+body { font-family: 'Inter', system-ui, sans-serif; color: #2C2C2C; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: #B7935B; color: #fff; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: #F0EFEC; }
+::-webkit-scrollbar-thumb { background: #C9C4BB; }
+::-webkit-scrollbar-thumb:hover { background: #B7935B; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+#scrollProgress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #8E7040, #B7935B, #D6B87E); z-index: 120; transition: width .1s linear; }
+
+#header { transition: background .5s ease, box-shadow .5s ease, backdrop-filter .5s ease; }
+#header .nav-link, #header .icon-btn, #header .logo-main { color: #FAFAFA; transition: color .45s ease; }
+#header .logo-sub { color: #B7935B; }
+#header .burger span { background: #FAFAFA; transition: background .45s ease; }
+#header.scrolled, #header.solid { background: rgba(250, 250, 250, .9); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); box-shadow: 0 1px 0 rgba(44,44,44,.07), 0 12px 40px -20px rgba(0,0,0,.18); }
+#header.scrolled .nav-link, #header.scrolled .icon-btn, #header.scrolled .logo-main,
+#header.solid .nav-link, #header.solid .icon-btn, #header.solid .logo-main { color: #2C2C2C; }
+#header.scrolled .burger span, #header.solid .burger span { background: #2C2C2C; }
+
+.nav-link { position: relative; padding-bottom: 3px; cursor: pointer; }
+.nav-link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0%; height: 1px; background: #B7935B; transition: width .4s cubic-bezier(.22,1,.36,1); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link:hover, .nav-link.active { color: #B7935B !important; }
+.nav-link.active::before { content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: #B7935B; border-radius: 50%; box-shadow: 0 0 8px rgba(183,147,91,.9); animation: pulseDot 2s ease-in-out infinite; }
+@keyframes pulseDot { 0%,100% { opacity: 1; transform: translateX(-50%) scale(1); } 50% { opacity: .5; transform: translateX(-50%) scale(1.4); } }
+
+.hero-perspective { perspective: 1400px; }
+.hero-layer { will-change: transform; }
+.hero-title { text-shadow: 0 24px 60px rgba(0,0,0,.45), 0 2px 0 rgba(0,0,0,.15); }
+.hero-vignette { background: radial-gradient(120% 90% at 50% 40%, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%), linear-gradient(to bottom, rgba(0,0,0,.72) 0%, rgba(0,0,0,.28) 38%, rgba(0,0,0,.82) 100%); }
+.grain::before { content:''; position:absolute; inset:0; pointer-events:none; opacity:.05; z-index:5; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::before { content:''; position:absolute; top:0; left:-130%; width:60%; height:100%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent); transform: skewX(-22deg); transition: left .75s cubic-bezier(.22,1,.36,1); }
+.btn-shine:hover::before { left: 145%; }
+
+.reveal { opacity: 0; transform: translateY(38px); transition: opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1); }
+.reveal.in { opacity: 1; transform: none; }
+.reveal[data-delay="1"] { transition-delay: .12s; }
+.reveal[data-delay="2"] { transition-delay: .24s; }
+.reveal[data-delay="3"] { transition-delay: .36s; }
+.reveal[data-delay="4"] { transition-delay: .48s; }
+
+.tilt-wrap { perspective: 1000px; }
+.tilt-card { transform-style: preserve-3d; transition: transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s ease; will-change: transform; }
+.tilt-inner { transform: translateZ(38px); }
+.tilt-shadow { box-shadow: 0 30px 60px -30px rgba(26,26,26,.5), 0 8px 20px -12px rgba(26,26,26,.35); }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+.product-media { position: relative; overflow: hidden; background: #EFEDE8; }
+.product-media img { transition: transform 1.1s cubic-bezier(.22,1,.36,1); }
+.product-card:hover .product-media img { transform: scale(1.05); }
+.product-badge { position: absolute; top: 14px; left: 14px; z-index: 3; background: rgba(26,26,26,.85); color: #FAFAFA; font-size: 9.5px; letter-spacing: .22em; text-transform: uppercase; padding: 6px 11px; backdrop-filter: blur(6px); }
+
+.pillar:hover .pillar-icon { transform: translateY(-6px) rotateY(180deg); }
+.pillar-icon { transition: transform .8s cubic-bezier(.22,1,.36,1); transform-style: preserve-3d; }
+
+.journal-img { transition: transform 1.2s cubic-bezier(.22,1,.36,1), filter .6s ease; }
+.journal-card:hover .journal-img { transform: scale(1.07); filter: brightness(.92); }
+
+.ig-item { position: relative; overflow: hidden; }
+.ig-item img { transition: transform 1s cubic-bezier(.22,1,.36,1), filter .5s ease; }
+.ig-item:hover img { transform: scale(1.09); filter: brightness(.6); }
+.ig-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .45s ease; color: #fff; }
+.ig-item:hover .ig-overlay { opacity: 1; }
+
+.drawer { position: fixed; top: 0; bottom: 0; width: min(420px, 88vw); z-index: 110; transition: transform .55s cubic-bezier(.22,1,.36,1); display: flex; flex-direction: column; }
+#mobileMenu { left: 0; transform: translateX(-105%); background: #1A1A1A; width: min(400px, 86vw); }
+#mobileMenu.open { transform: translateX(0); }
+#overlay { position: fixed; inset: 0; background: rgba(10,10,10,.55); backdrop-filter: blur(3px); z-index: 105; opacity: 0; pointer-events: none; transition: opacity .45s ease; }
+#overlay.show { opacity: 1; pointer-events: auto; }
+
+.hr-brass { width: 46px; height: 1px; background: #B7935B; }
+.link-underline { background-image: linear-gradient(#B7935B, #B7935B); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .45s cubic-bezier(.22,1,.36,1); }
+.link-underline:hover { background-size: 100% 1px; }
+
+.cat-tab { position: relative; padding: 14px 2px; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: rgba(44,44,44,.45); font-weight: 500; transition: color .35s ease; white-space: nowrap; cursor: pointer; background: none; border: none; font-family: inherit; }
+.cat-tab::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: #B7935B; transform: scaleX(0); transform-origin: center; transition: transform .45s cubic-bezier(.22,1,.36,1); }
+.cat-tab:hover { color: #2C2C2C; }
+.cat-tab.active { color: #2C2C2C; }
+.cat-tab.active::after { transform: scaleX(1); }
+.cat-tab .count { margin-left: 8px; font-size: 10px; opacity: .55; font-weight: 400; letter-spacing: .1em; }
+
+.filter-check { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 38px; padding: 0 14px; border: 1px solid rgba(44,44,44,.15); font-size: 11px; letter-spacing: .1em; color: #2C2C2C; cursor: pointer; user-select: none; transition: all .3s ease; }
+.filter-check:hover { border-color: #B7935B; }
+.filter-check input { display: none; }
+.filter-check:has(input:checked) { background: #1A1A1A; border-color: #1A1A1A; color: #fff; }
+
+.field { width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(44,44,44,.18); padding: 14px 0; font-size: 14px; color: #2C2C2C; font-family: 'Inter', sans-serif; outline: none; transition: border-color .35s ease; }
+.field::placeholder { color: rgba(44,44,44,.35); }
+.field:focus { border-bottom-color: #B7935B; }
+
+.faq-item { border-bottom: 1px solid rgba(44,44,44,.1); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 26px 0; cursor: pointer; width: 100%; background: none; border: none; text-align: left; font-family: 'Playfair Display', serif; font-size: 19px; color: #2C2C2C; transition: color .35s ease; }
+.faq-q:hover { color: #B7935B; }
+.faq-q svg { transition: transform .4s cubic-bezier(.22,1,.36,1); flex-shrink: 0; }
+.faq-item.open .faq-q svg { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .5s cubic-bezier(.22,1,.36,1), padding .4s ease; color: rgba(44,44,44,.6); font-size: 14.5px; line-height: 1.9; font-weight: 300; }
+.faq-item.open .faq-a { max-height: 320px; padding-bottom: 26px; }
+
+.page-view { display: none; }
+.page-view.active { display: block; }
+
+@keyframes scrollLine { 0%{transform:translateY(-100%)} 100%{transform:translateY(200%)} }
+.animate-scroll-line { animation: scrollLine 1.8s ease-in-out infinite; }
+
+/* Styled page — masonry */
+.styled-item { position: relative; overflow: hidden; background: #1a1a1a; }
+.styled-item img { transition: transform 1.2s cubic-bezier(.22,1,.36,1), filter .6s ease; }
+.styled-item:hover img { transform: scale(1.07); filter: brightness(.55); }
+.styled-info {
+  position: absolute; inset: 0; padding: 22px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  opacity: 0; transition: opacity .5s ease; color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,.85), transparent 60%);
+}
+.styled-item:hover .styled-info { opacity: 1; }
+
+/* Style Guide — article */
+.guide-card { transition: transform .5s cubic-bezier(.22,1,.36,1), box-shadow .5s ease; }
+.guide-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -25px rgba(26,26,26,.35); }
+
+.color-swatch { width: 100%; aspect-ratio: 1; border-radius: 2px; transition: transform .4s ease; }
+.color-swatch:hover { transform: scale(1.08); }
+
+.rule-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px; line-height: 1;
+  color: rgba(183,147,91,.25);
+  font-style: italic;
+}
+</style>
+</head>
+
+<body class="bg-alabaster">
+
+<div id="scrollProgress"></div>
+
+<!-- HEADER -->
+<header id="header" class="fixed top-0 left-0 w-full z-[100]">
+  <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-2 lg:grid-cols-3 items-center h-20 lg:h-[104px]">
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-9 text-[10.5px] font-medium uppercase tracking-widest2">
+        <a data-route="home" class="nav-link">Home</a>
+        <a data-route="shop" class="nav-link">Shop</a>
+        <a data-route="styled" class="nav-link">Styled</a>
+        <a data-route="guide" class="nav-link">Style Guide</a>
+        <a data-route="about" class="nav-link">About Us</a>
+        <a data-route="contact" class="nav-link">Contact</a>
+      </nav>
+      <button id="menuBtn" aria-label="Open menu" class="lg:hidden burger flex flex-col justify-center gap-[5px] w-9 h-9">
+        <span class="block w-6 h-[1.5px]"></span><span class="block w-4 h-[1.5px]"></span><span class="block w-6 h-[1.5px]"></span>
+      </button>
+      <a data-route="home" class="justify-self-end lg:justify-self-center text-center leading-none cursor-pointer">
+        <span class="logo-main block font-serif text-[22px] sm:text-[26px] lg:text-[31px] tracking-[0.2em] font-normal">KODA</span>
+        <span class="logo-sub block text-[8px] sm:text-[9px] lg:text-[10px] tracking-widest3 mt-[5px] font-medium">NOBLE MENSWEAR</span>
+      </a>
+      <div class="hidden lg:flex items-center justify-end gap-7">
+        <button class="icon-btn hover:text-brass transition-colors" aria-label="Search"><svg class="w-[19px] h-[19px]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M20 20l-3.5-3.5"/></svg></button>
+        <button class="icon-btn hover:text-brass transition-colors" aria-label="Account"><svg class="w-[19px] h-[19px]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path stroke-linecap="round" d="M4.5 20c1.2-3.8 4-5.6 7.5-5.6S18.3 16.2 19.5 20"/></svg></button>
+      </div>
+      <button id="menuBtnMobile" aria-label="Open menu" class="lg:hidden justify-self-end">
+        <svg class="w-[22px] h-[22px] text-white" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══════════════ PAGE: HOME ═══════════════ -->
+<section id="page-home" class="page-view active">
+
+  <div id="hero" class="relative w-full h-[100svh] min-h-[620px] flex items-center justify-center overflow-hidden bg-charcoal grain hero-perspective">
+    <div class="absolute inset-0 z-0 hero-layer" id="heroBg">
+      <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=2400&auto=format&fit=crop" alt="" class="w-full h-[118%] object-cover object-top opacity-[0.78] scale-105" />
+      <div class="absolute inset-0 hero-vignette"></div>
+    </div>
+    <div class="absolute inset-5 sm:inset-8 lg:inset-12 z-[2] pointer-events-none hidden sm:block">
+      <div class="absolute top-0 left-0 w-16 lg:w-24 h-[1px] bg-brass/50"></div>
+      <div class="absolute top-0 left-0 w-[1px] h-16 lg:h-24 bg-brass/50"></div>
+      <div class="absolute top-0 right-0 w-16 lg:w-24 h-[1px] bg-brass/50"></div>
+      <div class="absolute top-0 right-0 w-[1px] h-16 lg:h-24 bg-brass/50"></div>
+      <div class="absolute bottom-0 left-0 w-16 lg:w-24 h-[1px] bg-brass/50"></div>
+      <div class="absolute bottom-0 left-0 w-[1px] h-16 lg:h-24 bg-brass/50"></div>
+      <div class="absolute bottom-0 right-0 w-16 lg:w-24 h-[1px] bg-brass/50"></div>
+      <div class="absolute bottom-0 right-0 w-[1px] h-16 lg:h-24 bg-brass/50"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-[1000px] mx-auto flex flex-col items-center hero-layer" id="heroContent">
+      <span class="reveal in text-brass uppercase tracking-widest2 text-[10px] sm:text-xs font-semibold mb-6 block">The Autumn / Winter Collection</span>
+      <h1 class="reveal in hero-title text-white font-serif font-light leading-[1.06] mb-7 tracking-[0.01em] text-[42px] sm:text-[62px] md:text-[80px] lg:text-[96px]">Redefining the <br class="hidden sm:block" /><span class="italic text-alabaster">Modern Gentleman</span></h1>
+      <div class="reveal in flex items-center gap-4 mb-8"><span class="hr-brass"></span><span class="text-brass text-[10px] tracking-widest2 uppercase font-medium">Est. Koda Noble</span><span class="hr-brass"></span></div>
+      <p class="reveal in text-gray-200/90 text-[15px] sm:text-lg md:text-xl font-light max-w-2xl mb-11 leading-relaxed">Uncompromising craftsmanship meets contemporary design. Discover menswear tailored for the ambitious, the bold, and the refined.</p>
+      <div class="reveal in flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a data-route="shop" class="btn-shine bg-brass text-white px-10 py-4 text-[11px] tracking-widest2 uppercase font-medium transition-all duration-500 hover:bg-white hover:text-charcoal shadow-[0_18px_40px_-18px_rgba(183,147,91,.9)] flex items-center justify-center group cursor-pointer">Explore Collection<svg class="w-4 h-4 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+        <a data-route="styled" class="bg-white/[0.06] backdrop-blur-sm border border-white/60 text-white px-10 py-4 text-[11px] tracking-widest2 uppercase font-medium transition-all duration-500 hover:bg-white hover:text-charcoal flex items-center justify-center cursor-pointer">See How It's Worn</a>
+      </div>
+    </div>
+    <a data-scroll-to="shop-featured" class="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 group cursor-pointer">
+      <span class="text-white/55 text-[9px] tracking-widest2 uppercase group-hover:text-brass transition-colors">Scroll</span>
+      <span class="w-[1px] h-10 bg-white/30 overflow-hidden relative"><span class="absolute top-0 left-0 w-full h-1/2 bg-brass animate-scroll-line"></span></span>
+    </a>
+  </div>
+
+  <div class="marquee-wrap bg-charcoal py-4 overflow-hidden border-y border-white/[0.06]">
+    <div class="marquee-track">
+      <div class="flex items-center shrink-0">
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Bespoke Quality</span><span class="text-brass text-xs">◆</span>
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Premium Italian Fabrics</span><span class="text-brass text-xs">◆</span>
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Complimentary Alterations</span><span class="text-brass text-xs">◆</span>
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Hand Finished in Addis</span><span class="text-brass text-xs">◆</span>
+      </div>
+      <div class="flex items-center shrink-0" aria-hidden="true">
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Bespoke Quality</span><span class="text-brass text-xs">◆</span>
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Premium Italian Fabrics</span><span class="text-brass text-xs">◆</span>
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Complimentary Alterations</span><span class="text-brass text-xs">◆</span>
+        <span class="text-white/70 text-[10px] tracking-widest2 uppercase px-8">Hand Finished in Addis</span><span class="text-brass text-xs">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="shop-featured" class="py-24 lg:py-36 bg-alabaster">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 lg:mb-20">
+        <div class="reveal"><span class="text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">The Collections</span><h2 class="font-serif text-[34px] sm:text-[44px] lg:text-[56px] leading-[1.1] font-light text-ink">Dress With <span class="italic">Intention</span></h2></div>
+        <a data-route="shop" class="reveal link-underline text-[11px] tracking-widest2 uppercase font-medium text-ink/70 hover:text-brass transition-colors self-start md:self-auto pb-1 cursor-pointer">View All Categories</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6">
+        <div class="md:col-span-7 tilt-wrap reveal">
+          <a data-route="shop" data-cat="suits" class="tilt-card group block relative overflow-hidden bg-charcoal h-[440px] sm:h-[560px] lg:h-[680px] tilt-shadow cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-[1.3s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.07]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+            <div class="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end tilt-inner">
+              <span class="text-brass text-[10px] tracking-widest2 uppercase font-semibold mb-3">01 — Tailoring</span>
+              <h3 class="font-serif text-white text-[30px] sm:text-[38px] lg:text-[46px] font-light leading-tight mb-3">Suits &amp; Blazers</h3>
+              <p class="text-white/65 text-sm font-light max-w-sm mb-6 leading-relaxed">Structured silhouettes cut from Super 150s wool.</p>
+              <span class="inline-flex items-center gap-3 text-white text-[11px] tracking-widest2 uppercase font-medium">Discover <span class="w-8 h-[1px] bg-brass transition-all duration-500 group-hover:w-14"></span></span>
+            </div>
+          </a>
+        </div>
+        <div class="md:col-span-5 flex flex-col gap-5 lg:gap-6">
+          <a data-route="shop" data-cat="shirting" class="tilt-wrap reveal cursor-pointer" data-delay="1">
+            <div class="tilt-card group relative overflow-hidden bg-charcoal h-[300px] sm:h-[320px] lg:h-[330px] tilt-shadow">
+              <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1200&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-85 transition-transform duration-[1.3s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.08]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 p-7 lg:p-9 flex flex-col justify-end tilt-inner">
+                <span class="text-brass text-[10px] tracking-widest2 uppercase font-semibold mb-2.5">02 — Shirting</span>
+                <h3 class="font-serif text-white text-[26px] lg:text-[32px] font-light leading-tight mb-2">Premium Shirting</h3>
+                <span class="inline-flex items-center gap-3 text-white/80 text-[10px] tracking-widest2 uppercase font-medium mt-2">Discover <span class="w-6 h-[1px] bg-brass transition-all duration-500 group-hover:w-12"></span></span>
+              </div>
+            </div>
+          </a>
+          <div class="grid grid-cols-2 gap-5 lg:gap-6 flex-1">
+            <a data-route="shop" data-cat="trousers" class="tilt-wrap reveal cursor-pointer" data-delay="2">
+              <div class="tilt-card group relative overflow-hidden bg-charcoal h-[240px] lg:h-[326px] tilt-shadow">
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=900&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-85 transition-transform duration-[1.3s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.1]" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/88 to-transparent"></div>
+                <div class="absolute inset-0 p-5 lg:p-7 flex flex-col justify-end tilt-inner"><span class="text-brass text-[9px] tracking-widest2 uppercase font-semibold mb-2">03</span><h3 class="font-serif text-white text-[19px] lg:text-[24px] font-light leading-tight">Trousers</h3></div>
+              </div>
+            </a>
+            <a data-route="shop" data-cat="outerwear" class="tilt-wrap reveal cursor-pointer" data-delay="3">
+              <div class="tilt-card group relative overflow-hidden bg-charcoal h-[240px] lg:h-[326px] tilt-shadow">
+                <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=900&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-85 transition-transform duration-[1.3s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.1]" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/88 to-transparent"></div>
+                <div class="absolute inset-0 p-5 lg:p-7 flex flex-col justify-end tilt-inner"><span class="text-brass text-[9px] tracking-widest2 uppercase font-semibold mb-2">04</span><h3 class="font-serif text-white text-[19px] lg:text-[24px] font-light leading-tight">Outerwear</h3></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative bg-charcoal py-24 lg:py-36 overflow-hidden grain">
+    <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-brass/[0.09] blur-[140px] pointer-events-none"></div>
+    <div class="relative max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">The Koda Standard</span>
+        <h2 class="reveal text-white font-serif text-[34px] sm:text-[46px] lg:text-[58px] font-light leading-[1.12] mb-7" data-delay="1">Built On Three <span class="italic">Uncompromising</span> Pillars</h2>
+        <div class="reveal flex justify-center mb-7" data-delay="2"><span class="hr-brass"></span></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div class="pillar reveal group text-center md:text-left border-t border-white/[0.09] pt-9 hover:border-brass/60 transition-colors duration-500">
+          <div class="pillar-icon w-16 h-16 mb-7 mx-auto md:mx-0 flex items-center justify-center border border-brass/35 bg-brass/[0.07]"><svg class="w-7 h-7 text-brass" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l1.9 4.1 4.5.6-3.3 3.1.8 4.5L12 13.2 8.1 15.3l.8-4.5-3.3-3.1 4.5-.6L12 3z"/><path stroke-linecap="round" d="M6 20h12"/></svg></div>
+          <span class="text-brass/70 text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Pillar I</span>
+          <h3 class="text-white font-serif text-[24px] lg:text-[27px] font-light mb-4">Bespoke Quality</h3>
+          <p class="text-white/45 text-[14px] leading-[1.85] font-light">Hand-finished canvassing, horn buttons and hand-stitched lapels.</p>
+        </div>
+        <div class="pillar reveal group text-center md:text-left border-t border-white/[0.09] pt-9 hover:border-brass/60 transition-colors duration-500" data-delay="1">
+          <div class="pillar-icon w-16 h-16 mb-7 mx-auto md:mx-0 flex items-center justify-center border border-brass/35 bg-brass/[0.07]"><svg class="w-7 h-7 text-brass" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7l8-4 8 4v10l-8 4-8-4V7z"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 7l8 4 8-4M12 11v10"/></svg></div>
+          <span class="text-brass/70 text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Pillar II</span>
+          <h3 class="text-white font-serif text-[24px] lg:text-[27px] font-light mb-4">Premium Fabrics</h3>
+          <p class="text-white/45 text-[14px] leading-[1.85] font-light">Sourced directly from historic mills in Biella, Huddersfield and Kyoto.</p>
+        </div>
+        <div class="pillar reveal group text-center md:text-left border-t border-white/[0.09] pt-9 hover:border-brass/60 transition-colors duration-500" data-delay="2">
+          <div class="pillar-icon w-16 h-16 mb-7 mx-auto md:mx-0 flex items-center justify-center border border-brass/35 bg-brass/[0.07]"><svg class="w-7 h-7 text-brass" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.2 7-10V5.6L12 3 5 5.6V11c0 5.8 7 10 7 10z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.2 12l2 2 3.6-3.8"/></svg></div>
+          <span class="text-brass/70 text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Pillar III</span>
+          <h3 class="text-white font-serif text-[24px] lg:text-[27px] font-light mb-4">Sustainable Craft</h3>
+          <p class="text-white/45 text-[14px] leading-[1.85] font-light">Ethical ateliers, traceable supply chains and zero-waste pattern cutting.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20 lg:mt-28 pt-12 border-t border-white/[0.07]">
+        <div class="reveal text-center"><div class="font-serif text-brass text-[34px] lg:text-[42px] font-light leading-none mb-3" data-count="27">0</div><div class="text-white/40 text-[10px] tracking-widest2 uppercase">Years of Craft</div></div>
+        <div class="reveal text-center" data-delay="1"><div class="font-serif text-brass text-[34px] lg:text-[42px] font-light leading-none mb-3" data-count="42">0</div><div class="text-white/40 text-[10px] tracking-widest2 uppercase">Partner Mills</div></div>
+        <div class="reveal text-center" data-delay="2"><div class="font-serif text-brass text-[34px] lg:text-[42px] font-light leading-none mb-3" data-count="18">0</div><div class="text-white/40 text-[10px] tracking-widest2 uppercase">Countries Served</div></div>
+        <div class="reveal text-center" data-delay="3"><div class="font-serif text-brass text-[34px] lg:text-[42px] font-light leading-none mb-3" data-count="96">0</div><div class="text-white/40 text-[10px] tracking-widest2 uppercase">% Repeat Clients</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-24 lg:py-36 bg-alabaster overflow-hidden">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div class="reveal"><span class="text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">Curated Selection</span><h2 class="font-serif text-[34px] sm:text-[44px] lg:text-[56px] leading-[1.1] font-light text-ink">The <span class="italic">Bestsellers</span></h2></div>
+        <div class="reveal flex items-center gap-3">
+          <button id="prevBtn" class="w-12 h-12 border border-ink/15 hover:border-brass hover:bg-brass hover:text-white text-ink transition-all duration-400 flex items-center justify-center" aria-label="Previous"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+          <button id="nextBtn" class="w-12 h-12 border border-ink/15 hover:border-brass hover:bg-brass hover:text-white text-ink transition-all duration-400 flex items-center justify-center" aria-label="Next"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div id="productTrack" class="flex gap-5 lg:gap-7 overflow-x-auto no-scrollbar scroll-smooth pb-4 -mx-5 px-5 sm:mx-0 sm:px-0">
+        <article class="product-card group shrink-0 w-[76vw] sm:w-[46vw] md:w-[31vw] lg:w-[23.2%]">
+          <div class="product-media aspect-[3/4] mb-5"><span class="product-badge">Bestseller</span><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+          <div class="flex items-start justify-between gap-3"><div><h3 class="font-serif text-[17px] lg:text-[19px] text-ink leading-snug mb-1.5">The Kensington Suit</h3><p class="text-[11px] text-ink/45 tracking-wide">Super 150s Navy Wool</p></div><span class="text-[14px] lg:text-[15px] text-ink font-medium whitespace-nowrap">$1,280</span></div>
+        </article>
+        <article class="product-card group shrink-0 w-[76vw] sm:w-[46vw] md:w-[31vw] lg:w-[23.2%]">
+          <div class="product-media aspect-[3/4] mb-5"><span class="product-badge">New</span><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+          <div class="flex items-start justify-between gap-3"><div><h3 class="font-serif text-[17px] lg:text-[19px] text-ink leading-snug mb-1.5">The Oxford Shirt</h3><p class="text-[11px] text-ink/45 tracking-wide">Sea Island Cotton</p></div><span class="text-[14px] lg:text-[15px] text-ink font-medium whitespace-nowrap">$185</span></div>
+        </article>
+        <article class="product-card group shrink-0 w-[76vw] sm:w-[46vw] md:w-[31vw] lg:w-[23.2%]">
+          <div class="product-media aspect-[3/4] mb-5"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+          <div class="flex items-start justify-between gap-3"><div><h3 class="font-serif text-[17px] lg:text-[19px] text-ink leading-snug mb-1.5">The Tailored Trouser</h3><p class="text-[11px] text-ink/45 tracking-wide">Pleated Italian Wool</p></div><span class="text-[14px] lg:text-[15px] text-ink font-medium whitespace-nowrap">$265</span></div>
+        </article>
+        <article class="product-card group shrink-0 w-[76vw] sm:w-[46vw] md:w-[31vw] lg:w-[23.2%]">
+          <div class="product-media aspect-[3/4] mb-5"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+          <div class="flex items-start justify-between gap-3"><div><h3 class="font-serif text-[17px] lg:text-[19px] text-ink leading-snug mb-1.5">Charcoal Three-Piece</h3><p class="text-[11px] text-ink/45 tracking-wide">Flannel Wool Twill</p></div><span class="text-[14px] lg:text-[15px] text-ink font-medium whitespace-nowrap">$1,540</span></div>
+        </article>
+        <article class="product-card group shrink-0 w-[76vw] sm:w-[46vw] md:w-[31vw] lg:w-[23.2%]">
+          <div class="product-media aspect-[3/4] mb-5"><span class="product-badge">Limited</span><img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+          <div class="flex items-start justify-between gap-3"><div><h3 class="font-serif text-[17px] lg:text-[19px] text-ink leading-snug mb-1.5">The Overcoat</h3><p class="text-[11px] text-ink/45 tracking-wide">Double-Faced Cashmere</p></div><span class="text-[14px] lg:text-[15px] text-ink font-medium whitespace-nowrap">$1,450</span></div>
+        </article>
+        <article class="product-card group shrink-0 w-[76vw] sm:w-[46vw] md:w-[31vw] lg:w-[23.2%]">
+          <div class="product-media aspect-[3/4] mb-5"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+          <div class="flex items-start justify-between gap-3"><div><h3 class="font-serif text-[17px] lg:text-[19px] text-ink leading-snug mb-1.5">The Cotton Chino</h3><p class="text-[11px] text-ink/45 tracking-wide">Garment-Dyed Twill</p></div><span class="text-[14px] lg:text-[15px] text-ink font-medium whitespace-nowrap">$225</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-24 lg:py-36 bg-[#F2F0EB]">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="journal-card reveal tilt-wrap block">
+          <div class="tilt-card relative overflow-hidden tilt-shadow">
+            <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1600&auto=format&fit=crop" alt="" class="journal-img w-full h-[380px] sm:h-[480px] lg:h-[620px] object-cover" />
+            <div class="absolute top-6 left-6 bg-alabaster/95 backdrop-blur px-5 py-3"><span class="text-[9px] tracking-widest2 uppercase font-semibold text-brass block">Style Journal</span><span class="text-[9px] tracking-widest2 uppercase text-ink/50 block mt-1">Issue No. 07</span></div>
+          </div>
+        </div>
+        <div class="lg:pl-4">
+          <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">The Journal</span>
+          <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[52px] leading-[1.14] font-light text-ink mb-7" data-delay="1">How To Style A Navy Blazer For <span class="italic">Any Occasion</span></h2>
+          <div class="reveal hr-brass mb-8" data-delay="2"></div>
+          <p class="reveal text-ink/55 text-[15px] lg:text-[16px] leading-[1.95] font-light mb-9 max-w-lg" data-delay="2">From boardroom authority to weekend ease — the navy blazer is the most versatile weapon in a man's wardrobe.</p>
+          <a data-route="guide" class="reveal group inline-flex items-center gap-4 text-[11px] tracking-widest2 uppercase font-medium text-ink hover:text-brass transition-colors duration-400 cursor-pointer" data-delay="3">Read The Guide <span class="w-10 h-[1px] bg-brass transition-all duration-500 group-hover:w-20"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════ PAGE: SHOP ═══════════════ -->
+<section id="page-shop" class="page-view">
+  <div class="relative pt-[140px] lg:pt-[180px] pb-16 lg:pb-20 bg-charcoal grain overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.28]"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/85 via-charcoal/70 to-charcoal"></div>
+    <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-brass/[0.09] blur-[130px]"></div>
+    <div class="relative max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">The Full Collection</span>
+      <h1 class="reveal text-white font-serif text-[42px] sm:text-[62px] lg:text-[80px] font-light leading-[1.05] mb-6" data-delay="1">Shop <span class="italic">The House</span></h1>
+      <div class="reveal flex justify-center mb-7" data-delay="2"><span class="hr-brass"></span></div>
+      <p class="reveal text-white/55 text-[15px] lg:text-base font-light max-w-xl mx-auto" data-delay="2">Foundational pieces. Each crafted by hand, cut for the modern man.</p>
+      <p class="reveal text-brass/70 text-[10px] tracking-widest2 uppercase mt-5" data-delay="3">Prices displayed for reference — no online checkout</p>
+    </div>
+  </div>
+
+  <div class="sticky top-20 lg:top-[104px] z-[60] bg-alabaster/92 backdrop-blur-xl border-b border-ink/[0.07]">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex items-center justify-between gap-6">
+        <div class="flex items-center gap-7 lg:gap-10 overflow-x-auto no-scrollbar">
+          <button class="cat-tab active" data-category="all">All <span class="count">10</span></button>
+          <button class="cat-tab" data-category="suits">Suits &amp; Blazers <span class="count">4</span></button>
+          <button class="cat-tab" data-category="shirting">Shirting <span class="count">3</span></button>
+          <button class="cat-tab" data-category="trousers">Trousers <span class="count">2</span></button>
+          <button class="cat-tab" data-category="outerwear">Outerwear <span class="count">1</span></button>
+        </div>
+        <div class="hidden md:flex items-center gap-3 shrink-0">
+          <label class="text-[10px] tracking-widest2 uppercase text-ink/40 font-medium">Sort</label>
+          <select id="sortSelect" class="bg-transparent text-[11px] tracking-widest2 uppercase font-medium text-ink border-b border-ink/20 focus:border-brass outline-none pb-1 pr-4 cursor-pointer">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12 lg:py-16">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 lg:gap-14">
+        <aside class="reveal lg:sticky lg:top-[190px] lg:self-start">
+          <div class="flex items-center justify-between mb-7 lg:mb-8"><h3 class="font-serif text-[20px] text-ink">Refine</h3><button id="clearFilters" class="text-[10px] tracking-widest2 uppercase text-brass hover:text-ink transition-colors font-medium">Clear</button></div>
+          <div class="mb-8">
+            <h4 class="text-[10px] tracking-widest2 uppercase font-semibold text-ink/70 mb-4">Size</h4>
+            <div class="flex flex-wrap gap-2">
+              <label class="filter-check"><input type="checkbox" data-filter="size" value="46"><span>46</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="size" value="48"><span>48</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="size" value="50"><span>50</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="size" value="52"><span>52</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="size" value="54"><span>54</span></label>
+            </div>
+          </div>
+          <div class="mb-8">
+            <h4 class="text-[10px] tracking-widest2 uppercase font-semibold text-ink/70 mb-4">Fit</h4>
+            <div class="flex flex-wrap gap-2">
+              <label class="filter-check"><input type="checkbox" data-filter="fit" value="slim"><span>Slim</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="fit" value="tailored"><span>Tailored</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="fit" value="classic"><span>Classic</span></label>
+            </div>
+          </div>
+          <div class="mb-8">
+            <h4 class="text-[10px] tracking-widest2 uppercase font-semibold text-ink/70 mb-4">Color</h4>
+            <div class="flex flex-wrap gap-2">
+              <label class="filter-check"><input type="checkbox" data-filter="color" value="navy"><span>Navy</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="color" value="charcoal"><span>Charcoal</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="color" value="white"><span>White</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="color" value="beige"><span>Beige</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="color" value="black"><span>Black</span></label>
+            </div>
+          </div>
+          <div class="mb-8">
+            <h4 class="text-[10px] tracking-widest2 uppercase font-semibold text-ink/70 mb-4">Price</h4>
+            <div class="flex flex-wrap gap-2">
+              <label class="filter-check"><input type="checkbox" data-filter="price" value="0-200"><span>Under $200</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="price" value="200-500"><span>$200 – $500</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="price" value="500-1000"><span>$500 – $1k</span></label>
+              <label class="filter-check"><input type="checkbox" data-filter="price" value="1000-99999"><span>$1k+</span></label>
+            </div>
+          </div>
+        </aside>
+
+        <div>
+          <div class="flex items-center justify-between mb-7 lg:mb-9"><p class="text-[12px] text-ink/50 tracking-wide"><span id="resultCount">10</span> pieces</p></div>
+          <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 lg:gap-x-7 lg:gap-y-14">
+
+            <article class="product-card group cursor-pointer" data-category="suits" data-sizes="48,50,52" data-fits="tailored,slim" data-colors="navy" data-price="1280" data-new="1">
+              <div class="product-media aspect-[3/4] mb-4"><span class="product-badge">Bestseller</span><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Kensington Suit</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Super 150s Navy Wool</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$1,280</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="suits" data-sizes="46,48,50" data-fits="classic,tailored" data-colors="charcoal" data-price="1540">
+              <div class="product-media aspect-[3/4] mb-4"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">Charcoal Three-Piece</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Flannel Wool Twill</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$1,540</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="suits" data-sizes="48,50,52,54" data-fits="slim" data-colors="navy" data-price="980" data-new="1">
+              <div class="product-media aspect-[3/4] mb-4"><span class="product-badge">New</span><img src="https://images.unsplash.com/photo-1553240799-36bbf332a5c3?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">Midnight Slim Blazer</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Peak Lapel · Italian Wool</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$980</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="suits" data-sizes="46,48,50,52" data-fits="classic" data-colors="beige" data-price="1120">
+              <div class="product-media aspect-[3/4] mb-4"><img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">Heritage Linen Suit</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Pure Irish Linen</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$1,120</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="shirting" data-sizes="46,48,50,52" data-fits="slim,tailored" data-colors="white" data-price="185" data-new="1">
+              <div class="product-media aspect-[3/4] mb-4"><span class="product-badge">New</span><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Oxford Shirt</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Sea Island Cotton</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$185</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="shirting" data-sizes="48,50,52" data-fits="tailored,classic" data-colors="navy" data-price="215">
+              <div class="product-media aspect-[3/4] mb-4"><img src="https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Bengal Stripe</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Two-Ply Cotton Poplin</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$215</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="shirting" data-sizes="46,48,50" data-fits="slim" data-colors="black" data-price="240">
+              <div class="product-media aspect-[3/4] mb-4"><img src="https://images.unsplash.com/photo-1604695573706-53170668f6a6?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Evening Shirt</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Marcella Bib Front</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$240</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="trousers" data-sizes="48,50,52" data-fits="tailored" data-colors="charcoal" data-price="265">
+              <div class="product-media aspect-[3/4] mb-4"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Tailored Trouser</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Pleated Italian Wool</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$265</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="trousers" data-sizes="46,48,50,52" data-fits="slim,classic" data-colors="beige" data-price="225" data-new="1">
+              <div class="product-media aspect-[3/4] mb-4"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Cotton Chino</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Garment-Dyed Twill</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$225</span>
+            </article>
+
+            <article class="product-card group cursor-pointer" data-category="outerwear" data-sizes="48,50,52" data-fits="tailored" data-colors="charcoal" data-price="1450">
+              <div class="product-media aspect-[3/4] mb-4"><span class="product-badge">Limited</span><img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=1000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+              <h3 class="font-serif text-[15px] lg:text-[17px] text-ink leading-snug mb-1">The Overcoat</h3><p class="text-[11px] text-ink/45 tracking-wide mb-2">Double-Faced Cashmere</p><span class="text-[13px] lg:text-[14px] text-ink font-medium">$1,450</span>
+            </article>
+
+          </div>
+          <p id="noResults" class="hidden text-center py-20 text-ink/40 font-light">No pieces match your filters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ PAGE: STYLED (Client Gallery) ═══════════════ -->
+<section id="page-styled" class="page-view">
+  <div class="relative pt-[140px] lg:pt-[180px] pb-16 lg:pb-20 bg-charcoal grain overflow-hidden">
+    <div class="absolute -top-40 right-0 w-[520px] h-[520px] rounded-full bg-brass/[0.09] blur-[140px]"></div>
+    <div class="relative max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Worn By Our Clients</span>
+      <h1 class="reveal text-white font-serif text-[42px] sm:text-[62px] lg:text-[78px] font-light leading-[1.05] mb-7" data-delay="1">Styled <span class="italic">In The Real World</span></h1>
+      <div class="reveal flex justify-center mb-7" data-delay="2"><span class="hr-brass"></span></div>
+      <p class="reveal text-white/55 text-[15px] lg:text-base font-light max-w-2xl mx-auto" data-delay="2">Executive, groom, entrepreneur, groomsman. Real men, in real rooms, wearing Koda Noble. See how our pieces come alive outside the atelier.</p>
+    </div>
+  </div>
+
+  <!-- Featured hero image -->
+  <div class="bg-[#0d0d0d] py-14 lg:py-20">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div class="reveal tilt-wrap">
+          <div class="tilt-card relative overflow-hidden tilt-shadow">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1400&auto=format&fit=crop" alt="Koda Noble in the boardroom" class="w-full h-[480px] lg:h-[620px] object-cover" />
+            <div class="absolute top-6 left-6 bg-alabaster/95 backdrop-blur px-5 py-3">
+              <span class="text-[9px] tracking-widest2 uppercase font-semibold text-brass block">Feature Portrait</span>
+              <span class="text-[9px] tracking-widest2 uppercase text-ink/50 block mt-1">The Kensington Suit</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-white">
+          <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">The Boardroom Edit</span>
+          <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[52px] leading-[1.14] font-light mb-7" data-delay="1">Sharp From The <span class="italic">First Handshake</span></h2>
+          <div class="reveal hr-brass mb-8" data-delay="2"></div>
+          <p class="reveal text-white/55 text-[15px] lg:text-[16px] leading-[1.95] font-light mb-6 max-w-lg" data-delay="2">
+            Daniel walks into a quarterly board meeting wearing the Kensington in Super 150s navy, paired with the Oxford shirt in Sea Island cotton and the Noble Oxford in black calfskin.
+          </p>
+          <p class="reveal text-white/40 text-[13px] leading-relaxed font-light max-w-lg mb-8" data-delay="3">
+            <span class="text-brass/80 tracking-widest2 text-[10px] uppercase font-semibold">Wearing</span><br/>
+            The Kensington Suit · The Oxford Shirt · Noble Leather Oxford
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masonry gallery -->
+  <div class="bg-[#0d0d0d] py-16 lg:py-24">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-14">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">Real Men · Real Rooms</span>
+        <h2 class="reveal font-serif text-[30px] sm:text-[40px] lg:text-[48px] font-light text-white" data-delay="1">In Their <span class="italic">Own Words</span></h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
+
+        <!-- 1 — large -->
+        <div class="styled-item reveal col-span-2 row-span-2 aspect-square cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=1200&auto=format&fit=crop" alt="Executive in navy suit" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Client Portrait</span>
+            <h3 class="font-serif text-[22px] font-light mb-1">The Executive</h3>
+            <p class="text-white/65 text-[12px] font-light leading-relaxed">Navy Kensington Suit · Bengal Stripe Shirt</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="1">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" alt="Groom in charcoal" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Wedding</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">The Groom</h3>
+            <p class="text-white/65 text-[11px] font-light">Charcoal Three-Piece</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="2">
+          <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?q=80&w=800&auto=format&fit=crop" alt="Man in linen suit" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Summer</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">Heritage Linen</h3>
+            <p class="text-white/65 text-[11px] font-light">Irish Linen · Beige</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="1">
+          <img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=800&auto=format&fit=crop" alt="Editorial shirt detail" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Detail</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">The Oxford Shirt</h3>
+            <p class="text-white/65 text-[11px] font-light">Sea Island Cotton</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="3">
+          <img src="https://images.unsplash.com/photo-1553240799-36bbf332a5c3?q=80&w=800&auto=format&fit=crop" alt="Slim blazer" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Evening</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">Midnight Blazer</h3>
+            <p class="text-white/65 text-[11px] font-light">Peak Lapel</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="2">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop" alt="Trousers detail" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Tailoring</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">The Trouser</h3>
+            <p class="text-white/65 text-[11px] font-light">Pleated Italian Wool</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="1">
+          <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=800&auto=format&fit=crop" alt="Overcoat" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Winter</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">The Overcoat</h3>
+            <p class="text-white/65 text-[11px] font-light">Double-Faced Cashmere</p>
+          </div>
+        </div>
+
+        <!-- 8 — wide feature -->
+        <div class="styled-item reveal col-span-2 aspect-[2/1] cursor-pointer" data-delay="2">
+          <img src="https://images.unsplash.com/photo-1553240799-36bbf332a5c3?q=80&w=1400&auto=format&fit=crop" alt="Group of gentlemen" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">The Wedding Party</span>
+            <h3 class="font-serif text-[20px] font-light mb-1">A Weekend in Addis</h3>
+            <p class="text-white/65 text-[12px] font-light">Six groomsmen · Charcoal and navy three-pieces</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="1">
+          <img src="https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?q=80&w=800&auto=format&fit=crop" alt="Bengal stripe shirt" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Everyday</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">The Stripe</h3>
+            <p class="text-white/65 text-[11px] font-light">Bengal Poplin</p>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="styled-item reveal aspect-square cursor-pointer" data-delay="3">
+          <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=800&auto=format&fit=crop" alt="Cotton chino detail" class="w-full h-full object-cover" />
+          <div class="styled-info">
+            <span class="text-[9px] tracking-widest2 uppercase text-brass font-semibold mb-2">Weekend</span>
+            <h3 class="font-serif text-[16px] font-light mb-1">The Chino</h3>
+            <p class="text-white/65 text-[11px] font-light">Garment-Dyed Twill</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-charcoal py-20 lg:py-28 grain relative overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brass/[0.08] blur-[150px] pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto px-5 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Wear It Your Way</span>
+      <h2 class="reveal text-white font-serif text-[32px] sm:text-[42px] lg:text-[52px] font-light leading-[1.14] mb-8" data-delay="1">Your Story Deserves <span class="italic">A Great Suit</span></h2>
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center" data-delay="2">
+        <a data-route="shop" class="btn-shine bg-brass text-white px-10 py-4 text-[11px] tracking-widest2 uppercase font-medium hover:bg-white hover:text-charcoal transition-all duration-500 inline-flex items-center justify-center gap-3 cursor-pointer group">
+          Shop The Collection
+          <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a data-route="contact" class="border border-white/60 text-white px-10 py-4 text-[11px] tracking-widest2 uppercase font-medium hover:bg-white hover:text-charcoal transition-all duration-500 inline-flex items-center justify-center cursor-pointer">Book A Fitting</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ PAGE: STYLE GUIDE ═══════════════ -->
+<section id="page-guide" class="page-view">
+  <div class="relative pt-[140px] lg:pt-[180px] pb-16 lg:pb-20 bg-charcoal grain overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.22]"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/85 via-charcoal/75 to-charcoal"></div>
+    <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-brass/[0.09] blur-[140px]"></div>
+    <div class="relative max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">The Koda Noble Style Guide</span>
+      <h1 class="reveal text-white font-serif text-[42px] sm:text-[62px] lg:text-[78px] font-light leading-[1.05] mb-7" data-delay="1">Dress Well, <span class="italic">Effortlessly</span></h1>
+      <div class="reveal flex justify-center mb-7" data-delay="2"><span class="hr-brass"></span></div>
+      <p class="reveal text-white/55 text-[15px] lg:text-base font-light max-w-2xl mx-auto" data-delay="2">Everything a well-dressed man should know — colours, fit, fabrics, occasions, and the small details that separate good from unforgettable.</p>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <div class="py-20 lg:py-28 bg-alabaster">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <div class="reveal"><span class="text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">A Word From Our Head Tailor</span></div>
+      <h2 class="reveal font-serif text-[28px] sm:text-[38px] lg:text-[46px] leading-[1.16] font-light text-ink mb-8" data-delay="1">"Style is not what you wear — it's how you wear it."</h2>
+      <div class="reveal hr-brass mb-8 mx-auto" data-delay="2"></div>
+      <p class="reveal text-ink/60 text-[15px] lg:text-[17px] leading-[1.95] font-light max-w-2xl mx-auto mb-4" data-delay="2">
+        A man does not need fifty pieces. He needs ten good ones, worn with intention. Below is our complete guide to building a wardrobe that works — for the boardroom, the wedding, and the weekend.
+      </p>
+      <p class="reveal text-brass text-[11px] tracking-widest2 uppercase" data-delay="3">— Head Tailor, Koda Noble</p>
+    </div>
+  </div>
+
+  <!-- 1. Colour Combinations -->
+  <div class="py-20 lg:py-28 bg-[#F2F0EB]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-14">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">Chapter One</span>
+        <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[54px] leading-tight text-ink" data-delay="1">Colour <span class="italic">Combinations</span></h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-16">
+        <div class="reveal">
+          <h3 class="font-serif text-[24px] lg:text-[30px] text-ink font-light leading-tight mb-5">Start With A Foundation Of Three</h3>
+          <p class="text-ink/60 text-[15px] leading-[1.95] font-light mb-6">
+            The men who always look sharp have figured out one thing: <strong class="text-ink font-medium">navy, charcoal and white form the backbone of every good wardrobe</strong>. Everything else — camel, burgundy, olive, brass — is an accent that plays beautifully against those three.
+          </p>
+          <p class="text-ink/60 text-[15px] leading-[1.95] font-light mb-8">
+            Start every outfit by picking one of these three as your anchor. If your suit is navy, your shirt should be white or very pale blue. If your suit is charcoal, almost anything goes — but keep the shirt neutral.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 mb-8">
+            <div>
+              <div class="color-swatch mb-3" style="background:#1E2A44"></div>
+              <p class="text-[11px] tracking-widest2 uppercase font-semibold text-ink/70">Navy</p>
+              <p class="text-[11px] text-ink/40">#1E2A44</p>
+            </div>
+            <div>
+              <div class="color-swatch mb-3" style="background:#2A2A2A"></div>
+              <p class="text-[11px] tracking-widest2 uppercase font-semibold text-ink/70">Charcoal</p>
+              <p class="text-[11px] text-ink/40">#2A2A2A</p>
+            </div>
+            <div>
+              <div class="color-swatch mb-3" style="background:#F5F5F0; border:1px solid rgba(44,44,44,.1)"></div>
+              <p class="text-[11px] tracking-widest2 uppercase font-semibold text-ink/70">White</p>
+              <p class="text-[11px] text-ink/40">#F5F5F0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal tilt-wrap" data-delay="1">
+          <div class="tilt-card relative overflow-hidden tilt-shadow">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1200&auto=format&fit=crop" alt="Navy suit styled" class="w-full h-[460px] lg:h-[560px] object-cover" />
+            <div class="absolute top-6 left-6 bg-alabaster/95 backdrop-blur px-5 py-3">
+              <span class="text-[9px] tracking-widest2 uppercase font-semibold text-brass block">Foundation Look</span>
+              <span class="text-[9px] tracking-widest2 uppercase text-ink/50 block mt-1">Navy · White · Black</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proven combinations -->
+      <div class="reveal">
+        <h3 class="font-serif text-[24px] lg:text-[30px] text-ink font-light leading-tight mb-8 text-center">Six Combinations That Never Fail</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full" style="background:#1E2A44"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#F5F5F0; border:1px solid rgba(44,44,44,.1)"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#0F0F0F"></div>
+          </div>
+          <h4 class="font-serif text-[19px] text-ink mb-3">The Boardroom</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Navy suit · White shirt · Black shoes. The safest, strongest combination in menswear. Worn with a simple silk tie, this is authority without effort.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full" style="background:#2A2A2A"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#C7D4E5"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#6B2230"></div>
+          </div>
+          <h4 class="font-serif text-[19px] text-ink mb-3">The Evening</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Charcoal suit · Pale blue shirt · Burgundy tie. Warmer and richer. Perfect for gallery openings, dinner dates, and evening events.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full" style="background:#C7B79C"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#F5F5F0; border:1px solid rgba(44,44,44,.1)"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#7A4A28"></div>
+          </div>
+          <h4 class="font-serif text-[19px] text-ink mb-3">The Summer Wedding</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Beige linen suit · White shirt · Cognac derby. Warm, breathable, effortlessly elegant. Skip the tie — open collar does the work.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full" style="background:#1E2A44"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#C7B79C"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#7A4A28"></div>
+          </div>
+          <h4 class="font-serif text-[19px] text-ink mb-3">The Weekend</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Navy blazer · Stone chino · Brown suede loafer. The most versatile look in menswear. Lunch, shopping, long drive — all with one formula.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full" style="background:#2A2A2A"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#F5F5F0; border:1px solid rgba(44,44,44,.1)"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#B7935B"></div>
+          </div>
+          <h4 class="font-serif text-[19px] text-ink mb-3">The Celebration</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Charcoal suit · White shirt · Brass tie. Golden accent adds a touch of ceremony. Perfect for engagements, award dinners, milestones.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="3">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full" style="background:#4A5238"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#F5F5F0; border:1px solid rgba(44,44,44,.1)"></div>
+            <div class="w-10 h-10 rounded-full" style="background:#5B3A1F"></div>
+          </div>
+          <h4 class="font-serif text-[19px] text-ink mb-3">The Countryside</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Olive jacket · White shirt · Brown leather boot. Earth tones, natural textures, easy weekend elegance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Fit -->
+  <div class="py-20 lg:py-28 bg-alabaster">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-14">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">Chapter Two</span>
+        <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[54px] leading-tight text-ink" data-delay="1">Fit Is <span class="italic">Everything</span></h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+        <div class="reveal tilt-wrap">
+          <div class="tilt-card relative overflow-hidden tilt-shadow">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1200&auto=format&fit=crop" alt="Fit detail" class="w-full h-[460px] lg:h-[560px] object-cover" />
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <h3 class="font-serif text-[24px] lg:text-[30px] text-ink font-light leading-tight mb-5">A $200 Suit That Fits Beats A $2,000 Suit That Doesn't</h3>
+          <p class="text-ink/60 text-[15px] leading-[1.95] font-light mb-6">
+            Before you spend money on fabric or brand names — get the fit right. A correctly fitted suit makes you look taller, leaner, and more confident. Here is how to check yours in 30 seconds.
+          </p>
+          <ul class="space-y-3 text-ink/65 text-[14.5px] font-light">
+            <li class="flex gap-3"><span class="text-brass mt-1">◆</span><span><strong class="text-ink font-medium">Shoulders:</strong> The seam should sit exactly where your shoulder ends. Not beyond, not inside.</span></li>
+            <li class="flex gap-3"><span class="text-brass mt-1">◆</span><span><strong class="text-ink font-medium">Chest:</strong> You should be able to fit one flat hand between chest and jacket. Any more, it's too loose.</span></li>
+            <li class="flex gap-3"><span class="text-brass mt-1">◆</span><span><strong class="text-ink font-medium">Sleeve:</strong> Show ¼ to ½ inch of shirt cuff. Sleeve should end at the wrist bone.</span></li>
+            <li class="flex gap-3"><span class="text-brass mt-1">◆</span><span><strong class="text-ink font-medium">Jacket length:</strong> Should cover your seat — reaching the middle of your hands.</span></li>
+            <li class="flex gap-3"><span class="text-brass mt-1">◆</span><span><strong class="text-ink font-medium">Trouser break:</strong> One clean fold where trouser meets shoe. That's it.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Three fits -->
+      <div class="reveal">
+        <h3 class="font-serif text-[24px] lg:text-[30px] text-ink font-light leading-tight mb-8 text-center">Three Fits — Choose Your Silhouette</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+        <div class="reveal guide-card bg-white border border-ink/[0.06] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1553240799-36bbf332a5c3?q=80&w=900&auto=format&fit=crop" alt="Slim fit" class="w-full h-[280px] object-cover" />
+          <div class="p-7">
+            <span class="text-[10px] tracking-widest2 uppercase text-brass font-semibold block mb-2">Slim Fit</span>
+            <h4 class="font-serif text-[20px] text-ink mb-3">The Sharp Silhouette</h4>
+            <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Close to the body, minimal drape. Best for lean builds. Sharpest look for young men under 35 and for evening wear.</p>
+          </div>
+        </div>
+
+        <div class="reveal guide-card bg-white border border-ink/[0.06] overflow-hidden" data-delay="1">
+          <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=900&auto=format&fit=crop" alt="Tailored fit" class="w-full h-[280px] object-cover" />
+          <div class="p-7">
+            <span class="text-[10px] tracking-widest2 uppercase text-brass font-semibold block mb-2">Tailored Fit</span>
+            <h4 class="font-serif text-[20px] text-ink mb-3">The Balanced Classic</h4>
+            <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Defined but comfortable. Structured shoulders, gentle waist suppression. The safest fit for men of any age or build.</p>
+          </div>
+        </div>
+
+        <div class="reveal guide-card bg-white border border-ink/[0.06] overflow-hidden" data-delay="2">
+          <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?q=80&w=900&auto=format&fit=crop" alt="Classic fit" class="w-full h-[280px] object-cover" />
+          <div class="p-7">
+            <span class="text-[10px] tracking-widest2 uppercase text-brass font-semibold block mb-2">Classic Fit</span>
+            <h4 class="font-serif text-[20px] text-ink mb-3">The Generous Drape</h4>
+            <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Roomier through the chest and shoulders. Comfortable for broader builds and for men who prefer an easy, unhurried look.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Detail -->
+  <div class="py-20 lg:py-28 bg-[#F2F0EB]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-14">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">Chapter Three</span>
+        <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[54px] leading-tight text-ink" data-delay="1">The Details <span class="italic">That Matter</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]">
+          <div class="rule-num mb-4">01</div>
+          <h4 class="font-serif text-[20px] text-ink mb-3">Shoes</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Match your shoes to your belt — always. Black shoes for evening and formal. Brown/cognac for day and country. Suede loafers for warm weekends.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="1">
+          <div class="rule-num mb-4">02</div>
+          <h4 class="font-serif text-[20px] text-ink mb-3">The Belt</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Slim leather, no big buckle. Width should match your trouser loop. If you're wearing a suit, consider braces instead — no belt at all is the sharpest choice.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="2">
+          <div class="rule-num mb-4">03</div>
+          <h4 class="font-serif text-[20px] text-ink mb-3">The Watch</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Simple dial. Leather strap for formal, steel for everyday. Avoid oversized faces — 38 to 40mm is the sweet spot for most wrists.</p>
+        </div>
+
+        <div class="reveal guide-card bg-white p-7 border border-ink/[0.06]" data-delay="3">
+          <div class="rule-num mb-4">04</div>
+          <h4 class="font-serif text-[20px] text-ink mb-3">The Pocket Square</h4>
+          <p class="text-ink/55 text-[13.5px] font-light leading-relaxed">Never match your tie — complement it. White linen is the universal choice. One bold colour at a time. Fold: presidential (flat) for formal, puff for casual.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Build a Wardrobe -->
+  <div class="py-20 lg:py-28 bg-alabaster">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-14">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-4">Chapter Four</span>
+        <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[54px] leading-tight text-ink" data-delay="1">Build A <span class="italic">Wardrobe</span></h2>
+        <p class="reveal text-ink/50 text-[14.5px] font-light max-w-xl mx-auto mt-6" data-delay="2">Ten essentials. Everything else is a nice-to-have. Start with these and you'll never look out of place.</p>
+      </div>
+
+      <div class="space-y-6 max-w-4xl mx-auto">
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">01</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">The Navy Suit</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">Your most versatile investment. Works for business, weddings, and dinners. Choose Super 120s or 150s wool — smooth, resilient, timeless.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="1">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">02</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">The Charcoal Suit</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">Slightly more formal than navy. Wear it to evening events, board meetings, and serious occasions. The suit that says you mean business.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="2">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">03</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">Three White Shirts & Two Blue</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">White oxford for day, white poplin for formal, white linen for summer. Pale blue is the second-colour that goes with everything.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="3">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">04</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">The Navy Blazer</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">The most versatile jacket. Worn with chinos it's smart-casual; with wool trousers it's a proper suit replacement. Own one. Wear it weekly.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="1">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">05</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">Two Pairs of Good Trousers</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">Charcoal wool for formal settings, stone cotton for weekend. Get them hemmed with a single, clean break.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="2">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">06</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">The Overcoat</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">Double-faced cashmere in charcoal. Winter elegance in one garment. Knee-length is correct — not too long, not too short.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="3">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">07</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">Black Oxford Shoes</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">The most formal shoe a man can own. Wear them with suits, dinners, weddings, everything serious. Buy the best you can afford.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="1">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">08</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">Brown Derby or Loafer</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">Your daytime shoe. Cognac, walnut or stone suede. Wears beautifully with chinos, navy blazers, and beige linen.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start border-b border-ink/10 pb-6" data-delay="2">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">09</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">Three Silk Ties</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">Navy (safest), burgundy (warmest), brass (for celebration). Hand-rolled silk, 7–8 cm wide. No novelty prints, ever.</p>
+          </div>
+        </div>
+
+        <div class="reveal flex gap-6 items-start" data-delay="3">
+          <span class="font-serif text-brass text-[28px] font-light leading-none w-10 shrink-0">10</span>
+          <div class="flex-1">
+            <h4 class="font-serif text-[20px] text-ink mb-2">A Navy Overcoat-Trouser Combination</h4>
+            <p class="text-ink/55 text-[14px] font-light leading-relaxed">One look that works in every cold-weather situation: navy overcoat, charcoal trousers, white shirt, black oxfords. Learn it by heart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="bg-charcoal py-24 lg:py-32 grain relative overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brass/[0.08] blur-[150px] pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto px-5 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">The Final Word</span>
+      <h2 class="reveal text-white font-serif text-[32px] sm:text-[42px] lg:text-[52px] font-light leading-[1.14] mb-8" data-delay="1">When In Doubt, <span class="italic">Keep It Simple</span></h2>
+      <div class="reveal hr-brass mb-8 mx-auto" data-delay="2"></div>
+      <p class="reveal text-white/55 text-[15px] lg:text-[17px] leading-[1.95] font-light mb-10 max-w-2xl mx-auto" data-delay="2">
+        The best-dressed men are not the ones with the most clothes. They are the ones who know what suits them, bought well, and wore it with quiet confidence. Style is a habit — build it slowly, own it fully.
+      </p>
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center" data-delay="3">
+        <a data-route="shop" class="btn-shine bg-brass text-white px-10 py-4 text-[11px] tracking-widest2 uppercase font-medium hover:bg-white hover:text-charcoal transition-all duration-500 inline-flex items-center justify-center gap-3 cursor-pointer group">
+          Shop The Collection
+          <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a data-route="styled" class="border border-white/60 text-white px-10 py-4 text-[11px] tracking-widest2 uppercase font-medium hover:bg-white hover:text-charcoal transition-all duration-500 inline-flex items-center justify-center cursor-pointer">See How It's Worn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ PAGE: ABOUT US ═══════════════ -->
+<section id="page-about" class="page-view">
+  <div class="relative pt-[140px] lg:pt-[200px] pb-20 lg:pb-28 bg-charcoal grain overflow-hidden">
+    <div class="absolute inset-0 opacity-30"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2000&auto=format&fit=crop" alt="" class="w-full h-full object-cover" /></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-charcoal/75 to-charcoal"></div>
+    <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-brass/[0.09] blur-[140px]"></div>
+    <div class="relative max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Since 1998</span>
+      <h1 class="reveal text-white font-serif text-[42px] sm:text-[62px] lg:text-[80px] font-light leading-[1.05] mb-8" data-delay="1">The Art Of <span class="italic">Slow Tailoring</span></h1>
+      <div class="reveal flex justify-center mb-7" data-delay="2"><span class="hr-brass"></span></div>
+      <p class="reveal text-white/60 text-[15px] lg:text-lg font-light max-w-2xl mx-auto leading-relaxed" data-delay="2">Four ateliers. Two continents. A single standard — that every Koda Noble garment should be the finest thing in a man's wardrobe.</p>
+    </div>
+  </div>
+
+  <div class="py-24 lg:py-36 bg-alabaster">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="tilt-wrap reveal">
+          <div class="tilt-card relative overflow-hidden tilt-shadow">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop" alt="" class="w-full h-[420px] sm:h-[520px] lg:h-[680px] object-cover" />
+            <div class="absolute bottom-6 left-6 bg-alabaster/95 backdrop-blur px-5 py-3"><span class="text-[9px] tracking-widest2 uppercase font-semibold text-brass block">Chapter One</span><span class="text-[9px] tracking-widest2 uppercase text-ink/50 block mt-1">The Origins</span></div>
+          </div>
+        </div>
+        <div>
+          <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Our Story</span>
+          <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[52px] leading-[1.14] font-light text-ink mb-7" data-delay="1">A Quiet Obsession With <span class="italic">Detail</span></h2>
+          <div class="reveal hr-brass mb-8" data-delay="2"></div>
+          <div class="reveal space-y-5 text-ink/60 text-[15px] lg:text-[16px] leading-[1.95] font-light max-w-xl" data-delay="2">
+            <p>Koda Noble was born in 1998 in a small atelier above a tailor's shop in Addis Ababa — the same workshop where our founder learned to wield a needle at the age of fourteen.</p>
+            <p>What began as a single commission for a merchant's wedding suit grew, over two decades, into a house with ateliers across three cities. Today our garments are worn in boardrooms in Milan and by grooms in Addis. The tools have changed. The obsession hasn't.</p>
+            <p>We still cut every pattern by hand. We still sew the first buttonhole on every jacket ourselves. We still believe a man's wardrobe is not a collection — it is a diary.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <div class="relative bg-charcoal py-24 lg:py-36 overflow-hidden grain">
+    <div class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-brass/[0.08] blur-[140px]"></div>
+    <div class="relative max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-20">
+        <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">From Fibre to Finish</span>
+        <h2 class="reveal text-white font-serif text-[34px] sm:text-[46px] lg:text-[58px] font-light leading-[1.12]" data-delay="1">The <span class="italic">Process</span></h2>
+      </div>
+      <div class="relative">
+        <div class="absolute left-[19px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[1px] bg-brass/25"></div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-16">
+          <div class="md:text-right md:pr-16 pl-14 md:pl-0">
+            <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Step 01</span>
+            <h3 class="reveal text-white font-serif text-[24px] lg:text-[30px] font-light mb-4" data-delay="1">Fabric Selection</h3>
+            <p class="reveal text-white/50 text-[14px] leading-[1.9] font-light max-w-md md:ml-auto" data-delay="1">We travel to Biella, Huddersfield and Kyoto each season. Out of thousands of bolts, fewer than forty make it into our collection.</p>
+          </div>
+          <div class="absolute left-0 md:static md:left-auto top-0 md:top-auto"><div class="w-10 h-10 md:mx-auto rounded-full bg-charcoal border border-brass flex items-center justify-center text-brass font-serif text-[13px]">01</div></div>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-16">
+          <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 md:top-auto"><div class="w-10 h-10 rounded-full bg-charcoal border border-brass flex items-center justify-center text-brass font-serif text-[13px]">02</div></div>
+          <div class="md:order-2 md:pl-16 pl-14">
+            <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Step 02</span>
+            <h3 class="reveal text-white font-serif text-[24px] lg:text-[30px] font-light mb-4" data-delay="1">Pattern Cutting</h3>
+            <p class="reveal text-white/50 text-[14px] leading-[1.9] font-light max-w-md" data-delay="1">Each pattern is drafted by hand on paper, refined over decades. A single jacket block may go through 90 iterations before it earns the Koda mark.</p>
+          </div>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-16">
+          <div class="md:text-right md:pr-16 pl-14 md:pl-0">
+            <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Step 03</span>
+            <h3 class="reveal text-white font-serif text-[24px] lg:text-[30px] font-light mb-4" data-delay="1">Hand Assembly</h3>
+            <p class="reveal text-white/50 text-[14px] leading-[1.9] font-light max-w-md md:ml-auto" data-delay="1">A single suit passes through the hands of seven artisans. Floating canvas, hand-padded lapels, horn buttons — the way it was done a century ago.</p>
+          </div>
+          <div class="absolute left-0 md:static md:left-auto top-0 md:top-auto"><div class="w-10 h-10 md:mx-auto rounded-full bg-charcoal border border-brass flex items-center justify-center text-brass font-serif text-[13px]">03</div></div>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 md:top-auto"><div class="w-10 h-10 rounded-full bg-charcoal border border-brass flex items-center justify-center text-brass font-serif text-[13px]">04</div></div>
+          <div class="md:order-2 md:pl-16 pl-14">
+            <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Step 04</span>
+            <h3 class="reveal text-white font-serif text-[24px] lg:text-[30px] font-light mb-4" data-delay="1">Final Fitting</h3>
+            <p class="reveal text-white/50 text-[14px] leading-[1.9] font-light max-w-md" data-delay="1">Every garment is pressed, inspected and signed by the master tailor who finished it. It is then wrapped in tissue and sent to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commitment -->
+  <div class="py-24 lg:py-36 bg-alabaster">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Commitment</span>
+          <h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[52px] leading-[1.14] font-light text-ink mb-7" data-delay="1">Made With <span class="italic">Conscience</span></h2>
+          <div class="reveal hr-brass mb-8" data-delay="2"></div>
+          <div class="reveal space-y-5 text-ink/60 text-[15px] lg:text-[16px] leading-[1.95] font-light max-w-xl mb-10" data-delay="2">
+            <p>Every fabric we use is traceable to the farm, mill or spinner that produced it. Every atelier we work with is audited twice a year for fair wages and safe conditions.</p>
+            <p>Our zero-waste pattern cutting recycles 92% of off-cuts back into linings, pocket squares and buttons. What remains is composted or donated to local design schools.</p>
+          </div>
+          <div class="reveal grid grid-cols-2 gap-y-8 gap-x-6 max-w-md" data-delay="3">
+            <div><div class="font-serif text-brass text-[36px] font-light leading-none mb-2" data-count="42">0</div><div class="text-ink/45 text-[10px] tracking-widest2 uppercase">Partner Mills</div></div>
+            <div><div class="font-serif text-brass text-[36px] font-light leading-none mb-2" data-count="92">0</div><div class="text-ink/45 text-[10px] tracking-widest2 uppercase">% Waste Recycled</div></div>
+            <div><div class="font-serif text-brass text-[36px] font-light leading-none mb-2" data-count="27">0</div><div class="text-ink/45 text-[10px] tracking-widest2 uppercase">Years of Craft</div></div>
+            <div><div class="font-serif text-brass text-[36px] font-light leading-none mb-2" data-count="18">0</div><div class="text-ink/45 text-[10px] tracking-widest2 uppercase">Countries Served</div></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 lg:gap-5 tilt-wrap reveal" data-delay="2">
+          <div class="tilt-card overflow-hidden tilt-shadow col-span-2"><img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1200&auto=format&fit=crop" alt="" class="w-full h-[280px] lg:h-[340px] object-cover" /></div>
+          <div class="tilt-card overflow-hidden tilt-shadow"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[180px] lg:h-[240px] object-cover" /></div>
+          <div class="tilt-card overflow-hidden tilt-shadow"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[180px] lg:h-[240px] object-cover" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ PAGE: CONTACT ═══════════════ -->
+<section id="page-contact" class="page-view">
+  <div class="relative pt-[140px] lg:pt-[200px] pb-20 lg:pb-24 bg-charcoal grain overflow-hidden">
+    <div class="relative max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Get In Touch</span>
+      <h1 class="reveal text-white font-serif text-[42px] sm:text-[62px] lg:text-[80px] font-light leading-[1.05] mb-8" data-delay="1">We'd Love <span class="italic">To Hear From You</span></h1>
+      <div class="reveal flex justify-center mb-7" data-delay="2"><span class="hr-brass"></span></div>
+      <p class="reveal text-white/55 text-[15px] lg:text-lg font-light max-w-xl mx-auto" data-delay="2">Our team replies within one business day.</p>
+    </div>
+  </div>
+  <div class="py-20 lg:py-28 bg-alabaster">
+    <div class="max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20">
+        <div class="lg:col-span-2">
+          <span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Our Ateliers</span>
+          <h2 class="reveal font-serif text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.15] font-light text-ink mb-8" data-delay="1">Reach The House</h2>
+          <div class="reveal hr-brass mb-10" data-delay="2"></div>
+          <div class="space-y-9">
+            <div class="reveal" data-delay="2"><h4 class="text-[10px] tracking-widest2 uppercase font-semibold text-brass mb-3">Flagship — Addis Ababa</h4><p class="text-ink/65 text-[14.5px] leading-relaxed font-light">Bole Road, Kazanchis Business District<br />Addis Ababa, Ethiopia</p></div>
+            <div class="reveal" data-delay="2"><h4 class="text-[10px] tracking-widest2 uppercase font-semibold text-brass mb-3">Client Care</h4><p class="text-ink/65 text-[14.5px] leading-relaxed font-light"><a href="mailto:care@kodanoble.com" class="link-underline hover:text-brass transition-colors">care@kodanoble.com</a><br /><a href="tel:+251115550000" class="link-underline hover:text-brass transition-colors">+251 11 555 0000</a></p></div>
+          </div>
+        </div>
+        <div class="lg:col-span-3">
+          <div class="reveal bg-white border border-ink/[0.06] p-8 sm:p-10 lg:p-14 shadow-[0_30px_80px_-40px_rgba(26,26,26,.18)]" data-delay="1">
+            <span class="text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-3">Send A Message</span>
+            <h3 class="font-serif text-[24px] sm:text-[30px] text-ink font-light leading-tight mb-9">Tell Us How We Can Help</h3>
+            <form id="contactForm" class="space-y-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div><label class="text-[10px] tracking-widest2 uppercase text-ink/50 font-medium block mb-1">First Name</label><input type="text" required class="field" placeholder="John" /></div>
+                <div><label class="text-[10px] tracking-widest2 uppercase text-ink/50 font-medium block mb-1">Last Name</label><input type="text" required class="field" placeholder="Doe" /></div>
+              </div>
+              <div><label class="text-[10px] tracking-widest2 uppercase text-ink/50 font-medium block mb-1">Email</label><input type="email" required class="field" placeholder="you@example.com" /></div>
+              <div><label class="text-[10px] tracking-widest2 uppercase text-ink/50 font-medium block mb-1">Message</label><textarea rows="5" required class="field resize-none" placeholder="How can we assist you?"></textarea></div>
+              <button type="submit" class="btn-shine w-full sm:w-auto bg-charcoal text-white px-12 py-4 text-[11px] tracking-widest2 uppercase font-medium hover:bg-brass transition-colors duration-500 flex items-center justify-center gap-3 group">Send Message<svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+              <p id="contactMsg" class="text-brass text-[13px] opacity-0 transition-opacity duration-400">Thank you — we'll respond within one business day.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-20 lg:py-28 bg-[#F2F0EB]">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-16"><span class="reveal text-brass text-[10px] tracking-widest2 uppercase font-semibold block mb-5">Frequently Asked</span><h2 class="reveal font-serif text-[32px] sm:text-[42px] lg:text-[52px] font-light leading-tight text-ink" data-delay="1">Common <span class="italic">Questions</span></h2></div>
+      <div class="reveal" data-delay="2">
+        <div class="faq-item"><button class="faq-q">How long does a bespoke commission take?<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></button><div class="faq-a">A full bespoke suit takes 6–8 weeks from first fitting. Made-to-measure pieces typically ship within 3 weeks.</div></div>
+        <div class="faq-item"><button class="faq-q">What is your returns policy?<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></button><div class="faq-a">Unworn items may be returned within 30 days for a full refund. Bespoke commissions are final sale, but include complimentary alterations for life.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you ship internationally?<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></button><div class="faq-a">Yes — we ship to 18 countries with complimentary express shipping on orders over $500. Duties are calculated at checkout.</div></div>
+        <div class="faq-item"><button class="faq-q">How do I care for my Koda Noble garments?<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg></button><div class="faq-a">Each garment arrives with a care card detailing fabric-specific instructions. Generally: dry clean sparingly, brush wool after wear, and store suits on wide wooden hangers.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER (no newsletter) -->
+<footer class="bg-charcoal pt-20 lg:pt-24 grain relative overflow-hidden">
+  <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-brass/[0.06] blur-[150px] pointer-events-none"></div>
+  <div class="relative max-w-[1680px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-12 py-12 lg:py-16">
+      <div class="col-span-2 md:col-span-1">
+        <div class="mb-6"><span class="block font-serif text-white text-[24px] tracking-[0.2em]">KODA</span><span class="block text-brass text-[9px] tracking-widest3 mt-1.5 font-medium">NOBLE MENSWEAR</span></div>
+        <p class="text-white/40 text-[13px] font-light leading-relaxed max-w-xs mb-7">Tailored for the ambitious, the bold and the refined. Crafted to outlive trends.</p>
+        <div class="flex items-center gap-3">
+          <a class="w-10 h-10 border border-white/15 hover:border-brass hover:bg-brass text-white/70 hover:text-white flex items-center justify-center transition-all duration-400 cursor-pointer"><svg class="w-[17px] h-[17px]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+          <a class="w-10 h-10 border border-white/15 hover:border-brass hover:bg-brass text-white/70 hover:text-white flex items-center justify-center transition-all duration-400 cursor-pointer"><svg class="w-[17px] h-[17px]" fill="currentColor" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.4-.12-2.37 0-4 1.45-4 4.1v2.32H7.6V13h2.7v8h3.2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white text-[11px] tracking-widest2 uppercase font-semibold mb-6">Shop</h4>
+        <ul class="space-y-3.5 text-[13.5px] text-white/45 font-light">
+          <li><a data-route="shop" data-cat="suits" class="link-underline hover:text-brass transition-colors cursor-pointer">Suits &amp; Blazers</a></li>
+          <li><a data-route="shop" data-cat="shirting" class="link-underline hover:text-brass transition-colors cursor-pointer">Premium Shirting</a></li>
+          <li><a data-route="shop" data-cat="trousers" class="link-underline hover:text-brass transition-colors cursor-pointer">Trousers</a></li>
+          <li><a data-route="shop" data-cat="outerwear" class="link-underline hover:text-brass transition-colors cursor-pointer">Outerwear</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-[11px] tracking-widest2 uppercase font-semibold mb-6">Discover</h4>
+        <ul class="space-y-3.5 text-[13.5px] text-white/45 font-light">
+          <li><a data-route="styled" class="link-underline hover:text-brass transition-colors cursor-pointer">Styled — Client Gallery</a></li>
+          <li><a data-route="guide" class="link-underline hover:text-brass transition-colors cursor-pointer">Style Guide</a></li>
+          <li><a data-route="about" class="link-underline hover:text-brass transition-colors cursor-pointer">About Us</a></li>
+          <li><a data-route="contact" class="link-underline hover:text-brass transition-colors cursor-pointer">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-[11px] tracking-widest2 uppercase font-semibold mb-6">Client Care</h4>
+        <ul class="space-y-3.5 text-[13.5px] text-white/45 font-light">
+          <li><a data-route="contact" class="link-underline hover:text-brass transition-colors cursor-pointer">Shipping</a></li>
+          <li><a data-route="contact" class="link-underline hover:text-brass transition-colors cursor-pointer">Returns</a></li>
+          <li><a data-route="contact" class="link-underline hover:text-brass transition-colors cursor-pointer">Size Guide</a></li>
+          <li><a data-route="contact" class="link-underline hover:text-brass transition-colors cursor-pointer">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/[0.08] py-7 flex flex-col md:flex-row items-center justify-between gap-5">
+      <p class="text-white/30 text-[11.5px] tracking-wide">© <span id="year"></span> Koda Noble Menswear. All rights reserved.</p>
+      <div class="flex items-center gap-7 text-[11.5px] text-white/30">
+        <a class="hover:text-brass transition-colors cursor-pointer">Privacy</a>
+        <a class="hover:text-brass transition-colors cursor-pointer">Terms</a>
+        <a class="hover:text-brass transition-colors cursor-pointer">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="overlay"></div>
+
+<aside id="mobileMenu" class="drawer" aria-hidden="true">
+  <div class="flex items-center justify-between px-7 py-7">
+    <div><span class="block font-serif text-white text-[21px] tracking-[0.2em]">KODA</span><span class="block text-brass text-[8px] tracking-widest3 mt-1 font-medium">NOBLE MENSWEAR</span></div>
+    <button id="closeMenu" class="w-9 h-9 flex items-center justify-center text-white/50 hover:text-brass hover:rotate-90 transition-all duration-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="flex-1 flex flex-col justify-center px-8 gap-1">
+    <a data-route="home" class="mobile-link group flex items-center justify-between py-4 border-b border-white/[0.07] cursor-pointer"><span class="font-serif text-white text-[24px] font-light group-hover:text-brass transition-colors duration-400">Home</span><svg class="w-4 h-4 text-white/25 group-hover:text-brass group-hover:translate-x-1 transition-all duration-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+    <a data-route="shop" class="mobile-link group flex items-center justify-between py-4 border-b border-white/[0.07] cursor-pointer"><span class="font-serif text-white text-[24px] font-light group-hover:text-brass transition-colors duration-400">Shop</span><svg class="w-4 h-4 text-white/25 group-hover:text-brass group-hover:translate-x-1 transition-all duration-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+    <a data-route="styled" class="mobile-link group flex items-center justify-between py-4 border-b border-white/[0.07] cursor-pointer"><span class="font-serif text-white text-[24px] font-light group-hover:text-brass transition-colors duration-400">Styled</span><svg class="w-4 h-4 text-white/25 group-hover:text-brass group-hover:translate-x-1 transition-all duration-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+    <a data-route="guide" class="mobile-link group flex items-center justify-between py-4 border-b border-white/[0.07] cursor-pointer"><span class="font-serif text-white text-[24px] font-light group-hover:text-brass transition-colors duration-400">Style Guide</span><svg class="w-4 h-4 text-white/25 group-hover:text-brass group-hover:translate-x-1 transition-all duration-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+    <a data-route="about" class="mobile-link group flex items-center justify-between py-4 border-b border-white/[0.07] cursor-pointer"><span class="font-serif text-white text-[24px] font-light group-hover:text-brass transition-colors duration-400">About Us</span><svg class="w-4 h-4 text-white/25 group-hover:text-brass group-hover:translate-x-1 transition-all duration-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+    <a data-route="contact" class="mobile-link group flex items-center justify-between py-4 border-b border-white/[0.07] cursor-pointer"><span class="font-serif text-white text-[24px] font-light group-hover:text-brass transition-colors duration-400">Contact</span><svg class="w-4 h-4 text-white/25 group-hover:text-brass group-hover:translate-x-1 transition-all duration-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+  </nav>
+  <div class="px-8 pb-9"><div class="hr-brass mb-7"></div><p class="text-white/35 text-[11.5px] mb-2">Client Services</p><a href="mailto:care@kodanoble.com" class="text-brass text-[14px] font-light tracking-wide">care@kodanoble.com</a></div>
+</aside>
+
+<script>
+(function () {
+  'use strict';
+  const $  = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+
+  const yearEl = $('#year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* SCROLL + HEADER + PARALLAX */
+  const header = $('#header'), progress = $('#scrollProgress');
+  let ticking = false, currentRoute = 'home';
+  function onScroll() {
+    const y = window.scrollY || window.pageYOffset;
+    if (currentRoute !== 'home') { header.classList.add('solid'); header.classList.remove('scrolled'); }
+    else { header.classList.remove('solid'); header.classList.toggle('scrolled', y > 60); }
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (docH > 0 ? (y / docH) * 100 : 0) + '%';
+    const hero = $('#hero'), heroBg = $('#heroBg'), heroContent = $('#heroContent');
+    if (hero && heroBg && heroContent && y < hero.offsetHeight && currentRoute === 'home') {
+      heroBg.style.transform = `translate3d(0, ${y * 0.32}px, 0)`;
+      heroContent.style.transform = `translate3d(0, ${y * 0.14}px, 0)`;
+      heroContent.style.opacity = Math.max(0, 1 - y / (hero.offsetHeight * 0.72));
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+
+  /* ROUTER */
+  function showRoute(route, cat) {
+    currentRoute = route;
+    $$('.page-view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById('page-' + route);
+    if (target) target.classList.add('active');
+    $$('.nav-link').forEach(l => l.classList.toggle('active', l.dataset.route === route));
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    requestAnimationFrame(() => {
+      reobserveReveals();
+      if (route === 'shop' && cat) setShopCategory(cat);
+      onScroll();
+    });
+    if (history.replaceState) {
+      const hash = route === 'home' ? '' : '#' + route;
+      history.replaceState(null, '', location.pathname + location.search + hash);
+    }
+  }
+  function handleHash() {
+    const hash = (location.hash || '').replace('#', '') || 'home';
+    showRoute(hash);
+  }
+  window.addEventListener('hashchange', handleHash);
+
+  document.addEventListener('click', (e) => {
+    const routeEl = e.target.closest('[data-route]');
+    if (routeEl) {
+      e.preventDefault();
+      const route = routeEl.dataset.route, cat = routeEl.dataset.cat || 'all';
+      if (route === 'shop' && cat) showRoute('shop', cat);
+      else showRoute(route);
+      closeMenu(); return;
+    }
+    const scrollEl = e.target.closest('[data-scroll-to]');
+    if (scrollEl) {
+      e.preventDefault();
+      const el = document.getElementById(scrollEl.dataset.scrollTo);
+      if (el) { const top = el.getBoundingClientRect().top + window.pageYOffset - 90; window.scrollTo({ top, behavior: 'smooth' }); }
+    }
+  });
+
+  /* REVEAL */
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in'); revealIO.unobserve(entry.target); } });
+  }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
+  function reobserveReveals() { $$('.reveal:not(.in)').forEach(el => revealIO.observe(el)); }
+  reobserveReveals();
+
+  /* TILT */
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $$('.tilt-wrap').forEach(wrap => {
+      const card = wrap.querySelector('.tilt-card'); if (!card) return;
+      wrap.addEventListener('mousemove', (e) => {
+        const r = wrap.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(1100px) rotateY(${px * 7}deg) rotateX(${-py * 7}deg) translateY(-6px) scale(1.012)`;
+      });
+      wrap.addEventListener('mouseleave', () => { card.style.transform = 'perspective(1100px) rotateY(0deg) rotateX(0deg) translateY(0) scale(1)'; });
+    });
+  }
+
+  /* COUNTERS */
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target; if (el.dataset.done === '1') return;
+      el.dataset.done = '1';
+      const target = parseInt(el.dataset.count, 10); const start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / 1600, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + (target === 96 || target === 92 ? '%' : '+');
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step); counterIO.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  $$('[data-count]').forEach(c => counterIO.observe(c));
+
+  /* MOBILE MENU */
+  const overlay = $('#overlay'), mobileMenu = $('#mobileMenu');
+  const lockScroll = (l) => document.body.style.overflow = l ? 'hidden' : '';
+  function openMenu() { mobileMenu.classList.add('open'); overlay.classList.add('show'); lockScroll(true); }
+  function closeMenu() { mobileMenu.classList.remove('open'); overlay.classList.remove('show'); lockScroll(false); }
+  $('#menuBtn')?.addEventListener('click', openMenu);
+  $('#menuBtnMobile')?.addEventListener('click', openMenu);
+  $('#closeMenu')?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
+  $$('.mobile-link').forEach(l => l.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+  /* CAROUSEL */
+  const track = $('#productTrack'), prevBtn = $('#prevBtn'), nextBtn = $('#nextBtn');
+  if (track && prevBtn && nextBtn) {
+    const amt = () => Math.min(track.clientWidth * 0.85, 520);
+    nextBtn.addEventListener('click', () => track.scrollBy({ left: amt(), behavior: 'smooth' }));
+    prevBtn.addEventListener('click', () => track.scrollBy({ left: -amt(), behavior: 'smooth' }));
+  }
+
+  /* FAQ */
+  $$('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q?.addEventListener('click', () => item.classList.toggle('open'));
+  });
+
+  /* CONTACT */
+  const contactForm = $('#contactForm'), contactMsg = $('#contactMsg');
+  contactForm?.addEventListener('submit', (e) => { e.preventDefault(); contactMsg.style.opacity = '1'; setTimeout(() => contactMsg.style.opacity = '0', 5000); contactForm.reset(); });
+
+  /* SHOP FILTERS */
+  const catTabs = $$('.cat-tab'), shopProducts = $$('#productGrid .product-card');
+  const checkboxes = $$('.filter-check input');
+  const sortSelect = $('#sortSelect'), resultCount = $('#resultCount');
+  const noResults = $('#noResults'), grid = $('#productGrid');
+  let currentCat = 'all';
+  function setShopCategory(cat) {
+    currentCat = cat || 'all';
+    catTabs.forEach(t => t.classList.toggle('active', t.dataset.category === currentCat));
+    applyFilters();
+  }
+  function applyFilters() {
+    if (!grid) return;
+    const sizeSet = new Set(), fitSet = new Set(), colorSet = new Set(), priceSet = new Set();
+    checkboxes.forEach(cb => {
+      if (!cb.checked) return;
+      const k = cb.dataset.filter, v = cb.value;
+      if (k === 'size') sizeSet.add(v);
+      if (k === 'fit') fitSet.add(v);
+      if (k === 'color') colorSet.add(v);
+      if (k === 'price') priceSet.add(v);
+    });
+    let visible = 0;
+    shopProducts.forEach(p => {
+      const cat = p.dataset.category;
+      const sizes = (p.dataset.sizes || '').split(',');
+      const fits = (p.dataset.fits || '').split(',');
+      const colors = (p.dataset.colors || '').split(',');
+      const price = parseInt(p.dataset.price, 10);
+      let ok = true;
+      if (currentCat !== 'all' && cat !== currentCat) ok = false;
+      if (ok && sizeSet.size && !sizes.some(s => sizeSet.has(s))) ok = false;
+      if (ok && fitSet.size && !fits.some(f => fitSet.has(f))) ok = false;
+      if (ok && colorSet.size && !colors.some(c => colorSet.has(c))) ok = false;
+      if (ok && priceSet.size) {
+        const match = Array.from(priceSet).some(range => {
+          const [min, max] = range.split('-').map(Number);
+          return price >= min && price <= max;
+        });
+        if (!match) ok = false;
+      }
+      p.style.display = ok ? '' : 'none'; if (ok) visible++;
+    });
+    if (resultCount) resultCount.textContent = visible;
+    if (noResults) noResults.classList.toggle('hidden', visible > 0);
+  }
+  catTabs.forEach(tab => tab.addEventListener('click', () => setShopCategory(tab.dataset.category)));
+  checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
+  $('#clearFilters')?.addEventListener('click', () => { checkboxes.forEach(cb => cb.checked = false); setShopCategory('all'); });
+  sortSelect?.addEventListener('change', () => {
+    const val = sortSelect.value;
+    const sorted = [...shopProducts].sort((a, b) => {
+      const pa = parseInt(a.dataset.price, 10), pb = parseInt(b.dataset.price, 10);
+      if (val === 'price-asc') return pa - pb;
+      if (val === 'price-desc') return pb - pa;
+      if (val === 'newest') return (b.dataset.new === '1') - (a.dataset.new === '1');
+      return 0;
+    });
+    sorted.forEach(p => grid.appendChild(p));
+  });
+
+  /* INIT */
+  handleHash();
+  onScroll();
+})();
+</script>
+</body>
+</html>
